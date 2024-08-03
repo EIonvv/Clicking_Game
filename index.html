@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Clicking Game for bordom">
+    <meta name="keywords" content="Clicking Game">
+    <meta name="author" content="lol.andrew">
+    <link rel="icon" type="image/x-icon" href="assets/imgs/favicon.ico" />
+    <title>Clicking Game</title>
+    <style>
+        #menu-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            background-color: black;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body class="app-body" style="background-color: black; overflow: hidden;">
+    <div id="root">
+        <div id="click_counter" style="color: white;">
+            <p>Clicks: <span id="clicks">0</span>
+
+            </p>
+        </div>
+        <div id="auto_clicker_counter" style="color: white;">
+            <p>Auto Clickers: <span id="auto_clicker">0</span></p>
+        </div>
+        <div id="multiplier" style="color: white;">
+            <p>Multiplier: <span id="multiplier_value">1</span></p>
+        </div>
+        <div id="cps-counter" style="color: white;">
+            <p>CPS: <span id="cps">0</span></p>
+        </div>
+        <div id="menu-toggle" onclick="toggleMenu()" style="cursor:pointer; color:white;">Shop</div>
+        <div id="side-menu" style="color: white; display:none;">
+            <button id="buy">Buy Multiplier</button>
+            <span id="multiplier_cost">10</span>
+            <button id="buy_auto_clicker">Buy Auto Clicker</button>
+            <span id="auto_clicker_cost">100</span>
+            <button id="auto_click_speed">Buy Auto Clicker Speed</button>
+            <span id="auto_click_speed_cost">1000</span>
+        </div>
+        <canvas id="canvas">
+        </canvas>
+        <script src="assets/js/game/main.js">
+        </script>
+    </div>
+    <script src="/socket.io/socket.io.js" type="text/javascript"></script>
+    <script src="assets/js/game/socket/socket.js"></script>
+</body>
+
+</html>
